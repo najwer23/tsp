@@ -2,11 +2,19 @@
 const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
+let customEnrty = {};
+
+let arrEntry = ["dataIn", "index", "drawChart", "style"];
+for (let i=0; i<arrEntry.length; i++) {
+  customEnrty[arrEntry[i]] = path.resolve(__dirname, './assets/js/'+arrEntry[i]+'.js')
+}
+
+
+
+
+
 module.exports = {
-  entry: {
-    index: path.resolve(__dirname, './assets/js/index.js'),
-    style: path.resolve(__dirname, './assets/js/style.js') 
-  },
+  entry: customEnrty,
   output: {
     path: path.resolve(__dirname, './build'),
     filename: '[name].bunde.js'
