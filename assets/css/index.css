@@ -12,13 +12,12 @@ body {
     font-size: 1.2rem;
 }
 
-.chart-container {
-    width: 800px;
-    height: 800px;
+canvas {
+    background-color: #E6F3FF;
 }
 
 @media only screen and (max-width: 800px) {
-    .chart-container {
+    .canvas {
         width: auto;
         height: auto;
     }
