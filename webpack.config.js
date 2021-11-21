@@ -2,7 +2,7 @@
 const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
-let customEnrty = {};
+var customEnrty = {};
 
 let arrEntry = ["dataIn", "index", "drawChart", "style"];
 for (let i=0; i<arrEntry.length; i++) {
