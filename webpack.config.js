@@ -4,7 +4,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 var customEnrty = {};
 
-let arrEntry = ["dataIn", "index", "drawChart", "style"];
+let arrEntry = ["style", "dataIn", "index", "drawChart"];
 for (let i=0; i<arrEntry.length; i++) {
   customEnrty[arrEntry[i]] = path.resolve(__dirname, './assets/js/'+arrEntry[i]+'.js')
 }
