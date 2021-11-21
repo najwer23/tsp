@@ -8,7 +8,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "webpack serve --mode development --progress --open --hot",
-    "build": "webpack --mode production --progress"
+    "build": "webpack --mode production --progress",
+    "deploy": "gh-pages -d build"
   },
   "dependencies": {
     "@babel/core": "^7.13.15",
@@ -28,5 +29,8 @@
     "webpack": "^5.31.2",
     "webpack-cli": "^4.6.0",
     "webpack-dev-server": "^3.11.2"
+  },
+  "devDependencies": {
+    "gh-pages": "^3.2.3"
   }
 }
