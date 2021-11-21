@@ -1,31 +1,22 @@
 import { test1, test2} from './index.js'
 
-//console.log("test1", test1)
-//console.log("test2", test2)
-
 console.log(test1)
-
-
-
-
-
+console.log(test2)
 
 window.onload = () => {
-        var canvas1 = document.querySelector('#test1');
-canvas1.width = 600;
-canvas1.height = 600;
-var context1 = canvas1.getContext('2d');
+    var canvas1 = document.querySelector('#test1');
+    var canvas2 = document.querySelector('#test2');
+    
+    makeGraph(test1, canvas1)
+    makeGraph(test2, canvas2, 2, -60)
+}
 
-
-makeGraph(test1,context1)
-
-
-function makeGraph(tsp,context) {
+function makeGraph(tsp, canvas, bigger=1, tr=0) {
     let nodes = [];
     let edges = [];
 
-    let trans = 100;
-    let mul = 40;
+    let trans = 100 + tr;
+    let mul = 40 * bigger;
 
     for (let i=0; i<tsp.bestTour.length; i++) {
         nodes.push({
@@ -48,11 +39,17 @@ function makeGraph(tsp,context) {
         });
     }
 
-    drawGraph(edges, nodes, context)
+    drawGraph(edges, nodes, canvas)
 }
 
 
-function drawGraph(edges,nodes,context) {
+function drawGraph(edges, nodes, canvas) {
+    const WIDTH = 600
+    const HEIGHT = 600
+
+    canvas.width = WIDTH;
+    canvas.height = HEIGHT;
+    let context = canvas.getContext('2d');
     context.clearRect(0, 0, window.innerWidth, window.innerHeight);
 
     for (let i = 0; i < edges.length; i++) {
@@ -78,5 +75,5 @@ function drawGraph(edges,nodes,context) {
         context.stroke();
     }
 }
-}
+
 
