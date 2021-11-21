@@ -28,9 +28,7 @@
     "style-loader": "^2.0.0",
     "webpack": "^5.31.2",
     "webpack-cli": "^4.6.0",
-    "webpack-dev-server": "^3.11.2"
-  },
-  "devDependencies": {
+    "webpack-dev-server": "^3.11.2",
     "gh-pages": "^3.2.3"
   }
 }
