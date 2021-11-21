@@ -6,3 +6,5 @@ dom.watch();
 
 import '../css/muli.css';
 import '../css/index.css';
+import "../img/search.gif";
+
