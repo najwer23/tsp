@@ -1,13 +1,6 @@
-# TSP
+# The traveling salesman problem with Simulated Annealing (Euclidean distance)
 
-- Webpack 
-    - Babel, 
-    - CSS, 
-    - JS (ES2015, ES2016 & ES2017), Async/Await
-    - FontAwesome 5
-    - Fonts
-    - Webpack serve
-- HTML template
+- HTML Canvas, CSS3, JavaScript, Webpack, yarn
 
 ## Usage
 
@@ -20,7 +13,7 @@ $ yarn install
 ```
 
 ### Serve
-To serve in the browser - Runs webpack-dev-server
+To serve in the browser 
 
 ```sh
 $ yarn start
