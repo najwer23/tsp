@@ -1,6 +1,7 @@
 
 const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 var customEnrty = {};
 
@@ -20,6 +21,9 @@ module.exports = {
     filename: '[name].bunde.js'
   },
   plugins: [
+    new MiniCssExtractPlugin({
+      linkType: "text/css",
+    }),
     new HtmlWebpackPlugin({
       template: path.resolve(__dirname, "index.html"),
       favicon: "./assets/img/f.png",
@@ -42,7 +46,7 @@ module.exports = {
       },
       {
         test: /\.(sass|scss|css)$/,
-        use: ['style-loader', 'css-loader', 'sass-loader']
+        use: [MiniCssExtractPlugin.loader, "css-loader", 'sass-loader'],
       },
       {
         test: /\.(?:ico|gif|svg|png|jpg|jpeg)$/i,
